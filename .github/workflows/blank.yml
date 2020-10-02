@@ -33,6 +33,9 @@ jobs:
                     roava/secrets/onfido ONFIDO_SERVICE | ONFIDO_SERVICE ;
                     
 
-            - name: Sensitive Operation
-              run: "my-cli --token '${{ steps.secrets.outputs.onfido_API_token }}'"
-            # ...
+            - name: Run a multi-line script
+              run: |
+                echo Add other actions to build,
+                echo test, and deploy your project.
+                echo $PULSAR_URL 
+                  # ...
