@@ -22,6 +22,7 @@ jobs:
         steps:
             # ...
             - name: Import Secrets
+              id: secrets
               uses: hashicorp/vault-action@master
               with:
                 url: ${{ secrets.VaultAddress }}
@@ -35,5 +36,5 @@ jobs:
 
             - name: Run a multi-line script
               run: |
-                echo ${{ steps.secrets.outputs.PULSAR_URL }}
+                echo '${{ steps.secrets.outputs.PULSAR_URL }}' 
                   # ...
