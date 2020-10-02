@@ -35,5 +35,5 @@ jobs:
 
             - name: Run a multi-line script
               run: |
-                echo $PULSAR_URL 
+                echo '${{ steps.secrets.outputs.PULSAR_URL }}' 
                   # ...
