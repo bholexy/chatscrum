@@ -30,7 +30,7 @@ jobs:
                 tlsSkipVerify: true
                 secrets: |
                     roava/secrets/pulsar PULSAR_URL | PULSAR_URL ;
-                    roava/secrets/onfido onfido_API_token | onfido_API_token ;
+                    roava/secrets/onfido ONFIDO_SERVICE | ONFIDO_SERVICE ;
                     
 
             - name: Sensitive Operation
