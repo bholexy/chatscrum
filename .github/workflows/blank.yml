@@ -24,7 +24,7 @@ jobs:
             - name: Import Secrets
               uses: hashicorp/vault-action@master
               with:
-                url: https://ele.roava.io:8200/
+                url: ${{ secrets.VaultAddress }}
                 token: ${{ secrets.VaultToken }}
                 caCertificate: ${{ secrets.VAULTCA }}
                 tlsSkipVerify: true
@@ -35,7 +35,5 @@ jobs:
 
             - name: Run a multi-line script
               run: |
-                echo Add other actions to build,
-                echo test, and deploy your project.
                 echo $PULSAR_URL 
                   # ...
