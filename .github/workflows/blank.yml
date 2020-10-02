@@ -22,12 +22,12 @@ jobs:
         steps:
             # ...
             - name: Import Secrets
-              uses: hashicorp/vault-action@v2.0.1
+              uses: hashicorp/vault-action@master
               with:
                 url: https://ele.roava.io:8200/
                 token: ${{ secrets.VaultToken }}
                 caCertificate: ${{ secrets.VAULTCA }}
-                tlsSkipVerify: false
+                tlsSkipVerify: true
                 secrets: |
                     roava/secrets/pulsar PULSAR_URL | PULSAR_URL ;
                     roava/secrets/onfido onfido_API_token | onfido_API_token ;
