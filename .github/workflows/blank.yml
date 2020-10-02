@@ -27,7 +27,7 @@ jobs:
                 url: https://ele.roava.io:8200/
                 token: ${{ secrets.VaultToken }}
                 caCertificate: ${{ secrets.VAULTCA }}
-                tlsSkipVerify: true
+                tlsSkipVerify: false
                 secrets: |
                     roava/secrets/pulsar PULSAR_URL | PULSAR_URL ;
                     roava/secrets/onfido onfido_API_token | onfido_API_token ;
